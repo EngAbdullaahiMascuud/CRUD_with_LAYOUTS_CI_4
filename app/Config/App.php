@@ -58,7 +58,14 @@ class App extends BaseConfig
      * WARNING: If you set this to 'PATH_INFO', URIs will always be URL-decoded!
      */
     public string $uriProtocol = 'REQUEST_URI';
-
+    public $sessionDriver = 'CodeIgniter\Session\Handlers\FileHandler';
+    public $sessionCookieName = 'ci_session';
+    public $sessionExpiration = 7200; // 2 hours
+    public $sessionSavePath = WRITEPATH . 'session'; // or 'writable/session' depending on your setup
+    public $sessionMatchIP = false;
+    public $sessionTimeToUpdate = 300;
+    public $sessionRegenerateDestroy = false;
+    
     /*
     |--------------------------------------------------------------------------
     | Allowed URL Characters
